@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+input,
+input:focus {
+    border: none;
+    outline: 0;
+}
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+header nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .logo {
+    font-weight: 900;
+    font-size: 35px;
+    color: #fff;
+}
+
+header nav > ul > li a {
+    display: block;
+    padding: 35px 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+header ul li a:hover {
+    color: #000;
+}
+
+header .sub-menu:hover .menu-box {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all ease 0.3s;
+}
+
+header .menu-box {
+    transition: all ease 0.3s;
+    width: calc(100% + 150px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+header .menu-box li a {
+    transition: all ease 0.3s;
+    color: #333;
+    margin: 5px 0;
+    display: block;
+    padding: 5px;
+}
+
+header .menu-box li a:hover {
+    transition: all ease 0.3s;
+    color: #dc8d03;
+}
+
+header nav > ul li {
+    position: relative;
+}
+
+.nav_mob_icon {
+    display: none;
+}
+
+.nav_mob_icon img {
+    width: 30px;
+}
+
+.mob_nav_menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #111;
+    color: #fff;
+    width: 50%;
+    padding: 100px 20px 0 20px;
+    transition: all linear 0.3s;
+    display: none;
+    z-index: 1000;
+    height: 100vh;
+    overflow: auto;
+}
+
+.slide_nav {
+    transform: translate(100%);
+    transition: all ease 0.5s;
+}
+
+.mob_nav_menu.active {
+    display: block;
+    -webkit-animation: mob-nav 0.5s ease;
+    animation: mob-nav 0.5s ease;
+}
+
+.nav-overlay.active {
+    transition: all ease 0.5s;
+    width: 100%;
+}
+
+.nav-overlay {
+    transition: all ease 0.5s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background: #000;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+.mob_nav_head label {
+    background-color: #fff;
+    fill: #000;
+    border-radius: 1px;
+}
+
+@-webkit-keyframes mob-nav {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes mob-nav {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.mob_nav_menu > ul > li {
+    width: 100%;
+}
+
+.mob_nav_menu > ul > li > .mob_nav_head {
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mob_nav_menu > ul > li > .mob_nav_head > a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mob_nav_head.active {
+    background-color: #8a6a43;
+}
+
+.mob_nav_menu > ul > li.mob_nav > .active > a {
+    color: #111;
+}
+
+.mob_nav_menu > ul > li > .mob_nav_head > img {
+    width: 30px;
+}
+
+.mob_submenu {
+    height: 0;
+    overflow: hidden;
+}
+
+.mob_nav input {
+    display: none;
+}
+
+.mob_nav input:checked ~ .mob_submenu {
+    height: 100%;
+}
+
+.mob_nav input:checked ~ .mob_nav_head img {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.mob_submenu img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.mob_submenu li {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.searchButton img {
+    width: 15px;
+}
+
+.mob_nav_lwr {
+    padding: 10px 25px;
+    border-top: 1px solid #666;
+}
+
+.mob_nav_lwr .cart_icon svg {
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+.close_mob_nav {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.close_mob_nav svg {
+    width: 30px;
+}

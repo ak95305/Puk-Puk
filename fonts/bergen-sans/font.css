@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 400;
+    src: url('BergenSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 600;
+    src: url('BergenSans-SemiBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 800;
+    src: url('BergenSans-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 400;
+    font-style: italic;
+    src: url('BergenSans-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 600;
+    font-style: italic;
+    src: url('BergenSans-SemiBoldItalic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    font-weight: 800;
+    font-style: italic;
+    src: url('BergenSans-BoldItalic.otf') format('opentype');
+}
